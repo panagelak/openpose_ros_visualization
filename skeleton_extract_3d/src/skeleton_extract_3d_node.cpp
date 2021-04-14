@@ -26,8 +26,8 @@
 
 // Set resolution
 
-#define width  640
-#define height 480
+#define width  720
+#define height 1280
 
 // Declare Publishers
 ros::Publisher           pc_pub;
@@ -349,8 +349,8 @@ int main(int argc, char** argv){
 
   // Declare Subscribers
   // Synchronize Point Cloud and Image Subscription Received Messages
-  message_filters::Subscriber<sensor_msgs::PointCloud2> cloud_sub(nh, "/camera/depth_registered/points", 1);
-  message_filters::Subscriber<sensor_msgs::Image> image_sub(nh, "/camera/rgb/image_rect_color", 1);
+  message_filters::Subscriber<sensor_msgs::PointCloud2> cloud_sub(nh, "/zed2/zed_node/point_cloud/cloud_registered", 1);
+  message_filters::Subscriber<sensor_msgs::Image> image_sub(nh, "/zed2/zed_node/rgb/image_rect_color", 1);
   client = nh.serviceClient<openpose_ros_msgs::GetPersons>("/detect_poses_3d");
 
 

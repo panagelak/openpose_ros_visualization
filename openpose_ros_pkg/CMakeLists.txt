@@ -60,12 +60,12 @@ include_directories(
 
 add_executable(openpose_ros_node_3d src/openpose_ros_node_3d.cpp)
 target_link_libraries(openpose_ros_node_3d
-${catkin_LIBRARIES}
-
-${OPENPOSE_LINK_LIBRARY} 
-${CAFFE_LINK_LIBRARY} 
-													${GFLAGS_LIBRARY}
-													${OpenCV_LIBS} 
-													${GLOG_LIBRARY})
+  ${catkin_LIBRARIES}
+  ${OPENPOSE_LINK_LIBRARY} 
+  ${CAFFE_LINK_LIBRARY} 
+	${GFLAGS_LIBRARY}
+	${OpenCV_LIBS} 
+	${GLOG_LIBRARY}
+)
 						
 add_dependencies(openpose_ros_node_3d ${catkin_EXPORTED_TARGETS})
